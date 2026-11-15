@@ -1,0 +1,20 @@
+.dotnet/
+.dotnet-home/
+.nuget/
+.setup/
+
+bin/
+obj/
+**/bin/
+**/obj/
+
+# Release staging output. Yak packages are built explicitly after review.
+artifacts/
+
+.DS_Store
+
+.vs/
+.idea/
+*.suo
+*.user
+

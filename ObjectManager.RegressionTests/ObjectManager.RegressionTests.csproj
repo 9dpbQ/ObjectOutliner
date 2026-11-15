@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="../ObjectManager/Outliner/OutlinerHistoryImpact.cs" Link="OutlinerHistoryImpact.cs" />
+    <Compile Include="../ObjectManager/Outliner/CopyGroupRevision.cs" Link="CopyGroupRevision.cs" />
+    <Compile Include="../ObjectManager/Outliner/OutlinerRefreshPolicy.cs" Link="OutlinerRefreshPolicy.cs" />
+    <Compile Include="../ObjectManager/Outliner/OutlinerDiagnosticScope.cs" Link="OutlinerDiagnosticScope.cs" />
+    <Compile Include="../ObjectManager/Outliner/OutlinerRefreshMetrics.cs" Link="OutlinerRefreshMetrics.cs" />
+    <Compile Include="../ObjectManager/Outliner/OutlinerPerformanceRecorder.cs" Link="OutlinerPerformanceRecorder.cs" />
+    <Compile Include="../ObjectManager/Outliner/GenericObjectNameAllocator.cs" Link="GenericObjectNameAllocator.cs" />
+    <Compile Include="../ObjectManager/Outliner/ObjectNote.cs" Link="ObjectNote.cs" />
+    <Compile Include="../ObjectManager/Outliner/FavoriteCodec.cs" Link="FavoriteCodec.cs" />
+    <Compile Include="../ObjectManager/Outliner/CopyGroupMatcher.cs" Link="CopyGroupMatcher.cs" />
+    <Compile Include="../ObjectManager/Outliner/CopyMembershipMatcher.cs" Link="CopyMembershipMatcher.cs" />
+    <Compile Include="../ObjectManager/Outliner/OutlinerGroupMembershipIndex.cs" Link="OutlinerGroupMembershipIndex.cs" />
+    <Compile Include="../ObjectManager/Outliner/OutlinerGroupHierarchy.cs" Link="OutlinerGroupHierarchy.cs" />
+    <Compile Include="../ObjectManager/Outliner/OutlinerDocumentModel.cs" Link="OutlinerDocumentModel.cs" />
+    <Compile Include="../ObjectManager/Outliner/OutlinerNameKind.cs" Link="OutlinerNameKind.cs" />
+    <Compile Include="../ObjectManager/Outliner/OutlinerLayerHierarchy.cs" Link="OutlinerLayerHierarchy.cs" />
+    <Compile Include="../ObjectManager/Outliner/OutlinerNodeReference.cs" Link="OutlinerNodeReference.cs" />
+    <Compile Include="../ObjectManager/Outliner/OutlinerLayerExpansionPlanner.cs" Link="OutlinerLayerExpansionPlanner.cs" />
+    <Compile Include="../ObjectManager/Outliner/OutlinerGroupExpansionPlanner.cs" Link="OutlinerGroupExpansionPlanner.cs" />
+    <Compile Include="../ObjectManager/Outliner/DerivedNamingPolicy.cs" Link="DerivedNamingPolicy.cs" />
+    <Compile Include="../ObjectManager/Outliner/OutlinerHistoryStackPlanner.cs" Link="OutlinerHistoryStackPlanner.cs" />
+    <Compile Include="../ObjectManager/Outliner/OutlinerHistoryTraversal.cs" Link="OutlinerHistoryTraversal.cs" />
+    <Compile Include="../ObjectManager/Outliner/OutlinerFilterState.cs" Link="OutlinerFilterState.cs" />
+    <Compile Include="../ObjectManager/Outliner/OutlinerSelectionEventGate.cs" Link="OutlinerSelectionEventGate.cs" />
+    <Compile Include="../ObjectManager/Outliner/OutlinerStateChange.cs" Link="OutlinerStateChange.cs" />
+    <Compile Include="../ObjectManager/Outliner/OutlinerStructureChange.cs" Link="OutlinerStructureChange.cs" />
+    <Compile Include="../ObjectManager/Outliner/BatchRenamePlanner.cs" Link="BatchRenamePlanner.cs" />
+    <Compile Include="../ObjectManager/Outliner/GroupOrderPlanner.cs" Link="GroupOrderPlanner.cs" />
+    <Compile Include="../ObjectManager/Outliner/OutlinerDiagnosticMode.cs" Link="OutlinerDiagnosticMode.cs" />
+  </ItemGroup>
+
+</Project>

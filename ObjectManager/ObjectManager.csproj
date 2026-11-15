@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- Select the framework(s) you wish to target.
+        Rhino 6: net45
+        Rhino 7: net48
+        Rhino 8 Windows: net48, net7.0, net7.0-windows, net7.0-windows10.0.22000.0, etc
+        Rhino 8 Mac: net7.0, net7.0-macos, net7.0-macos12.0, etc
+    -->
+    <TargetFrameworks>net7.0;net48</TargetFrameworks>
+    <AssemblyName>ObjectOutliner</AssemblyName>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <TargetExt>.rhp</TargetExt>
+    <NoWarn>NU1701</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <!-- Specifies information for Assembly and Yak -->
+<Version>0.9.3</Version>
+    <Title>Object Outliner</Title>
+    <Product>Object Outliner</Product>
+    <Authors>9dpbQ</Authors>
+    <Company>9dpbQ</Company>
+    <Copyright>Copyright (c) 2026 9dpbQ</Copyright>
+    <Description>A fast object, group, and layer outliner for Rhino 8.</Description>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Keep the SDK at the API floor; see docs/RHINO_COMPATIBILITY.md. -->
+    <PackageReference Include="RhinoCommon" Version="8.15.25013.13001" ExcludeAssets="runtime" />
+    <ProjectReference Include="../WindowsTreeGuides/WindowsTreeGuides.csproj" ReferenceOutputAssembly="false"
+                      SkipGetTargetFrameworkProperties="true" SetTargetFramework="TargetFramework=net48" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="EmbeddedResources/object-outliner.ico">
+      <LogicalName>ObjectManager.EmbeddedResources.object-outliner.ico</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <Target Name="CopyWindowsTreeGuides" AfterTargets="Build">
+    <Copy SourceFiles="$(MSBuildProjectDirectory)/../WindowsTreeGuides/bin/$(Configuration)/net48/ObjectOutliner.WindowsGuides.dll"
+          DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="BuildMacTreeGuides" AfterTargets="Build"
+          Condition="$([MSBuild]::IsOSPlatform('OSX')) and '$(TargetFramework)' == 'net7.0'"
+          Inputs="$(MSBuildProjectDirectory)/Native/TreeGuides.m;$(MSBuildProjectFullPath)"
+          Outputs="$(TargetDir)libOOTreeGuides.dylib">
+    <Exec Command="xcrun clang -dynamiclib -fobjc-arc -arch arm64 -arch x86_64 -mmacosx-version-min=11.0 -framework Cocoa &quot;$(MSBuildProjectDirectory)/Native/TreeGuides.m&quot; -o &quot;$(TargetDir)libOOTreeGuides.dylib&quot;" />
+  </Target>
+</Project>
