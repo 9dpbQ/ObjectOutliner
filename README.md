@@ -1,6 +1,6 @@
 # Object Outliner
 
-A free Rhino 8 panel by 9dpbQ for browsing layers, groups, objects, and history
+A free Rhino 8 panel for browsing layers, groups, objects, and history
 in one tree. Select, rename, filter, or move objects without leaving the panel.
 
 ## Install
