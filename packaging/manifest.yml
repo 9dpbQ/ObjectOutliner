@@ -1,11 +1,13 @@
 name: ObjectOutliner
-version: 0.9.3
+version: 1.0.0
 authors:
   - 9dpbQ
 description: >
   A fast object, group, and layer outliner for Rhino 8. Browse, select,
-  organize, filter, and manage model contents from one panel. Free public beta
-  for Rhino 8.15 or later on macOS and Windows.
+  organize, filter, and manage model contents from one panel.
+  Version 1.0.0 adds per-object notes, improves tree updates in large models,
+  and makes nested relationships easier to see in the tree.
+  Free for Rhino 8.15 or later on macOS and Windows.
 icon: icon.png
 keywords:
   - outliner

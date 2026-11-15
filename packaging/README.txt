@@ -1,4 +1,4 @@
-Object Outliner 0.9.3 Public Beta
+Object Outliner 1.0.0
 =================================
 
 Object Outliner adds an outliner panel to Rhino 8. It lists layers,
@@ -21,13 +21,12 @@ Getting started
 2. Restart Rhino when prompted.
 3. Run the ObjectOutliner command to open the panel.
 
-Public beta note
-----------------
+New in 1.0.0
+------------
 
-This plug-in was originally made for a personal Rhino workflow and is now
-shared as a free public beta. It has been tested on macOS and Windows, but
-unexpected issues may still occur. Please keep a backup when working with
-important .3dm files.
+- Add per-object notes.
+- Improve tree updates in large models.
+- Make nested relationships easier to see in the tree.
 
 Privacy
 -------
@@ -50,7 +49,7 @@ This build is distributed under the MIT License. See the included LICENSE.txt.
 ------
 
 Object Outlinerは、Rhino 8のレイヤー、グループ、オブジェクトを
-1つのツリーで確認・管理するための無料Public Betaプラグインです。
+1つのツリーで確認・管理するための無料プラグインです。
 インストール後、Rhinoを再起動してObjectOutlinerコマンドを実行してください。
 
 Isolate / IsolateLockは作業中だけの状態となり、ファイルを開き直すと解除されます。
@@ -59,6 +58,8 @@ Isolate / IsolateLockは作業中だけの状態となり、ファイルを開�
 対応はRhino 8.15以降です。使用APIと8.15 SDKでのビルド検証を根拠にしています。
 Rhino 8.15そのものでの実機確認は、今後行う予定です。
 
-MacとWindowsで動作確認を行っていますが、予期しない不具合が残っている
-可能性があります。大切な.3dmファイルを扱う際は、念のためバックアップを
-残してからご利用ください。
+1.0.0の変更点
+
+- オブジェクトにメモを追加
+- 大きなモデルでのツリー更新を改善
+- ネスト関係が見やすくなるようにUIを改善

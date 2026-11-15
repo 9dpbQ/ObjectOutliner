@@ -2,7 +2,7 @@
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-VERSION="0.9.3"
+VERSION="1.0.0"
 STAGING_DIR="${OUTLINER_STAGING_DIR:-$ROOT_DIR/artifacts/yak-staging/ObjectOutliner-$VERSION}"
 
 if [[ -e "$STAGING_DIR" ]]; then

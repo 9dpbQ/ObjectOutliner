@@ -1,16 +1,10 @@
 # Changelog
 
-## Unreleased
+## 1.0.0
 
-- Batch multiple row deselections in one native selection write instead of repeated UnselectRow calls.
-- Preserve pending state updates after structural refresh instead of promoting their overlap to a full reload.
-- Incrementally refresh copied group aliases and use affected object counts to budget multi-layer updates.
-- Reuse copy-group reconciliation until objects or group memberships change, with a final transform-completion reconciliation.
-- Add debug-only selection timing breakdowns, refresh queue latency, dispatch IDs, command event counts, and copy timings to the background JSONL log.
-- Reuse copy-name allocation within an undo operation and cache object presentation to reduce Gumball/Array stalls in large documents.
-- Capture only the source objects' groups instead of scanning every group; add debug-only copy timings.
-- Add per-object notes with a note column, multiline popup, previews, and a notes-only filter.
-- Store notes in plugin-specific object attributes with native save, copy, and undo support.
+- Add per-object notes.
+- Improve tree updates in large models.
+- Make nested relationships easier to see in the tree.
 
 ## 0.9.3 - Stability and display fixes
 
